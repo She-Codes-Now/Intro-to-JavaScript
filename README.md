@@ -1,5 +1,5 @@
 #Intro to JavaScript
-###@Instructor: @Sheyna
+###Instructor: @Sheyna
 
 You will also need:
 * a computer

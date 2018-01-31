@@ -19,10 +19,6 @@
             <li>Grumpy</li>
             <li>Dopey</li>
           </ul>
-          <!-- Add a Form here later for Homework #4 -->
-          <!--<form>-->
-              <!--<input type="text" name="user-guess" placeholder="Guess" id="user-guess">-->
-          <!--</form>-->
       </section>
     </main>
     <footer>
@@ -30,10 +26,8 @@
         <a href="http://www.sheynawatkins.com/" target="_blank">Sheyna Watkins</a>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
-      $(document).ready(function() {
-      //Write your JavaScript here:
+      window.onload = function() {
 
         var answer = Math.floor(Math.random() * 6 + 1);
         console.log(answer);
@@ -75,7 +69,7 @@
           alert("Sorry, your guess " + guess + " is incorrect. The correct answer is " + answer);
         }
 
-      }); // Closes $(document).ready ... Leave this alone
+      } // Closes window.onload
 
     </script>
   </body>

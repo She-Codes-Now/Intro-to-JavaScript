@@ -19,10 +19,19 @@
           <li>Grumpy</li>
           <li>Dopey</li>
         </ul>
-         <!--&lt;!&ndash; Add a Form here later for Homework #4 &ndash;&gt;-->
-        <!--<form id="user-guesses">-->
-        <!--<input type="text" name="user-guess" placeholder="Guess">-->
-        <!--</form>-->
+
+         <!-- //////////////// Add a Form here for Homework #4 /////////////////////////-->
+           <!--
+             <form id="user-guesses">
+               <p>Which of the 7 dwarfs am I thinking of?</p>
+               <input type="text" name="userGuess" id="userGuess"><br>
+             </form>
+          -->
+          <!-- to keep this exercise simple, leave submit button outside of the FORM brackets -->
+          <!--
+             <input type="submit" value="Submit" id="submitForm">
+          -->
+
       </section>
     </main>
     <footer>
@@ -30,10 +39,9 @@
       <a href="http://www.sheynawatkins.com/" target="_blank">Sheyna Watkins</a>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
-      $(document).ready(function() { // ignore this line
-        //Write your JavaScript here:
+      window.onload = function() { // ignore this line
+        // Write your JavaScript here:
 
         var answer = Math.floor(Math.random() * 6 + 1);
         console.log(answer);
@@ -62,7 +70,8 @@
 
         while (noAnswer) {
           // guess = guess.toLowerCase();
-          if (guess == "doc" || guess == "grumpy" || guess == "sleepy" || guess == "bashful" || guess == "dopey" || guess == "happy" || guess == "sneezy") {
+          if (guess == "Doc" || guess == "Grumpy" || guess == "Sleepy" || guess == "Bashful" || guess == "Dopey" || guess == "Happy" || guess == "Sneezy") {
+                  // if (guess == "doc" || guess == "grumpy" || guess == "sleepy" || guess == "bashful" || guess == "dopey" || guess == "happy" || guess == "sneezy") {
             noAnswer = false;
           } else {
             guess = prompt("I'm sorry, I didn't understand your guess. Please try again. Which of the 7 dwarfs am I thinking of?");
@@ -78,7 +87,22 @@
           alert("Sorry, your guess " + guess + " is incorrect. The correct answer is " + answer);
         }
 
-      }); // Closes $(document).ready ... Leave this alone
+          // // ---------------------  Use with Homework #4 ---------------------------------------
+          //
+          // //---------- create event listener to trigger the processing of the form when submit button is clicked:
+          // document.getElementById("submitForm").addEventListener('click', evaluateGuesses);
+          //
+          // // ---------- On the line above see how when you 'click' it triggers a function called 'evaluateGuesses.'
+          // // ---------- Using the code we wrote in class as a base, write a function below to process the form :
+          // function evaluateGuesses() {
+          //      // YOUR CODE GOES HERE
+          //      // How to get the value of a form input: https://www.w3schools.com/jsref/prop_text_value.asp
+          // }
+
+      } // Closes window.onload ... Leave this alone
+
+
+
 
     </script>
   </body>

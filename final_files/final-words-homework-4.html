@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>This is my page title</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/styles.css">
+  </head>
+  <body>
+    <!-- Content for the page goes here -->
+
+    <main>
+      <div class="featured-image"></div>
+      <section>
+        <h1>Seven Dwarfs <span>Guessing Game</span></h1>
+        <ul>
+          <li>Doc</li>
+          <li>Happy</li>
+          <li>Bashful</li>
+          <li>Sneezy</li>
+          <li>Sleepy</li>
+          <li>Grumpy</li>
+          <li>Dopey</li>
+        </ul>
+
+         <!-- //////////////// Add a Form here for Homework #4 /////////////////////////-->
+           <form id="user-guesses">
+             <p>Which of the 7 dwarfs am I thinking of?</p>
+             <input type="text" name="userGuess" id="userGuess"><br>
+           </form>
+
+          <!-- to keep this exercise simple, leave submit button outside of the FORM brackets -->
+          <input type="submit" value="Submit" id="submitForm">
+
+
+      </section>
+    </main>
+    <footer>
+      <p>A project for She Codes Now: Intro to JavaScript</p>
+      <a href="http://www.sheynawatkins.com/" target="_blank">Sheyna Watkins</a>
+    </footer>
+
+    <script>
+      window.onload = function() {
+
+        var answer = Math.floor(Math.random() * 6 + 1);
+        console.log(answer);
+
+        if (answer == 1) {
+          answer = "Doc";
+        } else if (answer == 2) {
+          answer = "Grumpy";
+        } else if (answer == 3) {
+          answer = "Sleepy";
+        } else if (answer == 4) {
+          answer = "Bashful";
+        } else if (answer == 5) {
+          answer = "Dopey";
+        } else if (answer == 6) {
+          answer = "Happy";
+        } else {
+          answer = "Sneezy";
+        }
+        console.log(answer);
+
+        // ---------------------  Use with Homework #4 ---------------------------------------
+        // ---------- create event listener to trigger the processing of the form when submit button is clicked:
+        document.getElementById("submitForm").addEventListener('click', evaluateGuesses);
+
+        // ---------- On the line above see how when you 'click' it triggers a function called 'evaluateGuesses.'
+        // ---------- Using the code we wrote in class as a base, write a function below to process the form :
+
+        function evaluateGuesses() {
+          var guess = document.getElementById("userGuess").value;
+
+          var noAnswer = true;
+
+            guess = guess.toLowerCase();
+            if (guess == "doc" || guess == "grumpy" || guess == "sleepy" || guess == "bashful" || guess == "dopey" || guess == "happy" || guess == "sneezy") {
+                noAnswer = false;
+            } else {
+                alert("I'm sorry, I didn't understand your guess. Please try again.");
+            }
+
+          if (noAnswer == false && guess.toLowerCase() == answer.toLowerCase()) {
+            alert("That is correct!");
+          } else if (noAnswer == false && guess.toLowerCase() != answer.toLowerCase()) {
+            alert("Sorry, your guess " + guess + " is incorrect. The correct answer is " + answer);
+          }
+        }
+
+      } // Closes window.onload
+
+    </script>
+  </body>
+</html>
+

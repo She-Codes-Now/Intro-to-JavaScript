@@ -4,10 +4,10 @@ A brief overivew to get insight into the basics of JavaScript.
 
 This workshop is hosted by sheCodesNow: https://www.meetup.com/She-Codes-Now/
 
-Original content created by: Suzanne Richman
+Original content created by: Shenya Watkins
 
-## Instructor:
-Sooz Richman [@FavoredFortune](https://github.com/FavoredFortune) also on Twiiter [@mavenofcode](https://twitter.com/MavenofCode)
+## Instructor/Updates by:
+Suzanne (aka Sooz) Richman [@FavoredFortune](https://github.com/FavoredFortune) also on Twiiter [@mavenofcode](https://twitter.com/MavenofCode)
 
 ## Workshop requirements: 
 

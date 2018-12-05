@@ -1,6 +1,6 @@
 # Intro to JavaScript
 
-A brief overivew to get insight into the basics of JavaScript.
+A brief overview to get insight into the basics of JavaScript.
 
 This workshop is hosted by sheCodesNow: https://www.meetup.com/She-Codes-Now/
 
